@@ -14,6 +14,7 @@ reg d arandr.Arandr arandr
 reg d audacity.Audacity audacity
 reg d claws-mail.Claws-mail claws-mail
 reg d emacs.Emacs emacs
+reg d gimp.* gimp
 reg d gl.mpv mpv
 reg d gramps.Gramps gramps
 reg d gvim.Gvim gvim
@@ -23,10 +24,10 @@ reg d pyfonts.Pyfonts pyfonts
 reg d spacefm.Spacefm spacefm
 reg d spotify.Spotify spotify
 reg d spotify.Spotify spotifyw
+reg d surf.Surf surf
 reg d terminal-tabbed.tabbed x-terminal-tabbed
 reg d weechat* weechatw
 reg d xcalc.XCalc xcalc
-reg d surf.Surf surf
 
 reg t - alsamixer
 reg t - htop
@@ -40,5 +41,3 @@ reg t - podbeuter
 reg t - vifm
 
 ign tk - task
-reg - - dacti
-reg - - gimp
