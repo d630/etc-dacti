@@ -32,9 +32,14 @@ reg d xcalc.XCalc xcalc
 reg t - alsamixer
 reg t - htop
 reg t - mutt--d630
+reg t - mutt--d630-archive
 reg t - mutt--posteo
+reg t - mutt--posteo-archive
 reg t - mutt--posteo1
+reg t - mutt--posteo1-archive
 reg t - mutt--spool
+reg t - mutt--hotmail
+reg t - mutt--hotmail-archive
 reg t - ncmpcpp
 reg t - newsbeuter
 reg t - podbeuter
