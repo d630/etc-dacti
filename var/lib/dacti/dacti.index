@@ -19,7 +19,7 @@ reg d gl.mpv mpv
 reg d gramps.Gramps gramps
 reg d gvim.Gvim gvim
 reg d libreoffice.libreoffice-startcenter libreoffice
-reg d marble-qt.Marble-qt marble-qt
+reg d marble.marble marble
 reg d pyfonts.Pyfonts pyfonts
 reg d spacefm.Spacefm spacefm
 reg d spotify.Spotify spotify
