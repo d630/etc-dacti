@@ -30,7 +30,7 @@ case $in_tty in
         /usr/local/bin/dmenu2 -b -f -i \
             -l "10" \
             -p "$1" \
-            -fn "Monospace:size=9" \
+            -fn "monospace-9:normal" \
             -name "dacti" \
             -class "dacti";;
     (*)
@@ -43,7 +43,7 @@ case $in_tty in
         0<&- /usr/local/bin/dmenu2 -b -f -i \
             -l "10" \
             -p "$1" \
-            -fn "Monospace:size=9" \
+            -fn "monospace-9:normal" \
             -name "dacti" \
             -class "dacti";;
     (*)
@@ -51,9 +51,6 @@ case $in_tty in
 esac;
 
 function Dacti::ExecAppCustom () (
-    command -v "$command" 1>/dev/null 2>&1 ||
-        return 1;
-
     IFS=' ';
 
     case ${App[keep]}${App[nterminal]}${App[terminal]} in
@@ -157,11 +154,6 @@ if
 then
 
 function Dacti::RaiseAppCustom {
-    [[ -n $DISPLAY ]] || {
-        Dacti::ExecAppCustom;
-        return $?;
-    };
-
     typeset \
         class \
         i \
