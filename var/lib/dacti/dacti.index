@@ -3,9 +3,7 @@ ign d - pwgenw-xsel
 ign d - pyrandgen-xsel
 ign d - xorg-dpms-standby
 
-reg d .*Chromium chromium
 reg d .*Chromium chromiumw
-reg d .*Firefox-esr firefox
 reg d .*Firefox-esr firefoxw
 reg d .*TelegramDesktop telegram-desktop
 reg d .*mediathek-Main mediathekview
@@ -22,7 +20,6 @@ reg d libreoffice.libreoffice-startcenter libreoffice
 reg d marble.marble marble
 reg d pyfonts.Pyfonts pyfonts
 reg d spacefm.Spacefm spacefm
-reg d spotify.Spotify spotify
 reg d spotify.Spotify spotifyw
 reg d surf.Surf surf
 reg d terminal-tabbed.tabbed x-terminal-tabbed
