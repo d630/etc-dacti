@@ -13,16 +13,16 @@ reg d .*Pidgin pidgin
 reg d .*Pyfonts pyfonts
 reg d .*Signal signal-desktop
 reg d .*Spacefm spacefm
-reg d .*Spotify spotifyw
+reg d .*Spotify run-spotify
 reg d .*TelegramDesktop telegram-desktop
 reg d .*XCalc xcalc
-reg d .*[Cc]hromium chromiumw
-reg d .*[Ff]irefox firefoxw
+reg d .*[Cc]hromium run-chromium
+reg d .*[Ff]irefox run-firefox
 reg d .*libreoffice.* libreoffice
 reg d .*mediathek-Main mediathekview
 reg d .*mpv mpv
 reg d terminal-tabbed.tabbed x-terminal-tabbed
-reg d weechatw.* weechatw
+reg d weechatw.* run-weechat
 
 reg t - alsamixer
 reg t - htop

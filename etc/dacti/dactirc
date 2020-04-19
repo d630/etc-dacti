@@ -25,66 +25,66 @@ menu=(
 function Dacti::CmdMenuCustom
 case $in_tty in
 	(\?)
-		/usr/local/bin/dmenu2 -b -f -i \
+		command dmenu2 -b -f -i \
 			-l 10 \
 			-p "$1" \
 			-fn monospace-9:normal \
 			-name dacti \
 			-class dacti;;
 	(*)
-		/usr/local/bin/slmenu -b -i -p "$1";;
+		command slmenu -b -i -p "$1";;
 esac;
 
 function Dacti::CmdMenuEmptyCustom
 case $in_tty in
 	(\?)
-		0<&- /usr/local/bin/dmenu2 -b -f -i \
+		0<&- command dmenu2 -b -f -i \
 			-l 10 \
 			-p "$1" \
 			-fn monospace-9:normal \
 			-name dacti \
 			-class dacti;;
 	(*)
-		<<< "" /usr/local/bin/slmenu -b -i -p "$1";;
+		<<< "" command slmenu -b -i -p "$1";;
 esac;
 
 function Dacti::ParseSelectionCustom
 case ${1,,} in
 	(z)
-		z-run;;
+		command run-z;;
 	(clipbuffer2primary)
-		clipbuffer;;
+		command clipbuffer;;
 	(clipbuffer2clipboard)
-		clipbuffer -b;;
+		command clipbuffer -b;;
 	(web)
 		case $in_tty in
 			(\?)
-				setsidw "$term" -e "${SHELL:-sh}" \
+				command daemonize "$term" -e "${SHELL:-sh}" \
 					-c "furlview '$XDG_VAR_HOME/log/urls.log';read" 2>/dev/null;;
 			(*)
-				furlview "$XDG_VAR_HOME/log/urls.log";;
+				command furlview "$XDG_VAR_HOME/log/urls.log";;
 		esac;;
 	(c-web)
 		case $in_tty in
 			(\?)
-				setsidw "$term" -e "${SHELL:-sh}" \
-					-c 'chromiumw-mselect-history;read' 2>/dev/null;;
+				command daemonize "$term" -e "${SHELL:-sh}" \
+					-c 'chromium-history;read' 2>/dev/null;;
 			(*)
-				chromiumw-mselect-history;;
+				command chromium-history;;
 		esac;;
 	(radio)
-		wradio;;
+		command wradio;;
 	(pw)
-		pass-copy --type;;
+		command pass2clipboard --type;;
 	(pw-clip)
-		pass-copy;;
+		command pass2clipboard;;
 	(wecker)
 		case $in_tty in
 			(\?)
-				setsidw "$term" -e "${SHELL:-sh}" \
-					-c 'rtcwakew;read' 2>/dev/null;;
+				command daemonize "$term" -e "${SHELL:-sh}" \
+					-c 'run-rtcwake;read' 2>/dev/null;;
 			(*)
-				rtcwakew;;
+				command run-rtcwake;;
 		esac;;
 	(*)
 		! :;;
