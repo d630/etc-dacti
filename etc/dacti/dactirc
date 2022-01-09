@@ -173,6 +173,7 @@ if [[ $X_XCLIENT == bspwm && $(exec -- uname --kernel-name) == Linux ]]; then
                             .desktops[] |
                             rek(.root)
                         '
+                    )
             fi
         fi
 
